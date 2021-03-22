@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Post from './components/Post';
 
+// This is the basic component of the application
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // In React a component can include only one tag)
+    <BrowserRouter>
+    {/*In react "class" is in the attribute "className"*/}
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/posts/:id" component={Post} />
+          </Switch>
+        </div>
+    </BrowserRouter>
   );
 }
 
