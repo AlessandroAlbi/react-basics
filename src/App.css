@@ -25,19 +25,24 @@
   font-style: italic;
 }
 
-.posts {
-  text-transform: uppercase;
-}
-
 a {
   text-decoration: none;
 }
 
 .post-title {
   color: tomato;
+  text-transform: uppercase;
+}
+
+.post-title:hover {
+  color: turquoise;
+}
+
+.post-page-title {
+  color: tomato;
+  text-transform: uppercase;
 }
 
 span {
   font-weight: bolder;
 }
-

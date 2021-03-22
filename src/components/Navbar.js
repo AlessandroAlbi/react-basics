@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import {Link} from 'react-router-dom';
 
+// This component is declared as a functins and is stateless (stateless are components that doesn't handle any state)
 function Navbar() {
     return (
         <div className="Navbar">

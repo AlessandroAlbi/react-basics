@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import '../App.css';
 import {Link} from 'react-router-dom';
 
-// This component is declared as a functins and implement "Hoocks" for the state management
+// This component is declared as a functins and implement "Hooks" for the state management
 function Home() {
     // This call the fuction fetchData everytime the component is rendered
     useEffect(() => {
@@ -30,19 +30,19 @@ function Home() {
             <p className="text">
                 In this solutions you can find the basic functions of React, see comments in code 
                 to learn more.
-            </p>
-            <p className="text">
-                In the example above you can see <span>Route</span> and <span>Hooks</span> in use.
+                <br/>
+                In the example below you can see <span>Route</span> and <span>Hooks</span> in use.
             </p>
             <h2>Posts list</h2>
             <p className="text">
-                Click one of the posts to navigate.
+                Click one of the posts below to navigate to his page.
             </p>
             {/*Iterate over the post array*/}
-            <div className="posts">
+            <div>
                 {posts.map(post => (
-                    <Link key={post.id} style={{color: 'white'}} to={`/posts/${post.id}`}>
-                        <h4 className="post-title">{post.title}</h4>
+                    // Creata a link for every post
+                    <Link key={post.id} to={`/posts/${post.id}`}>
+                        <h3 className="post-title">{post.title}</h3>
                     </Link>))}
             </div>
         </div>
